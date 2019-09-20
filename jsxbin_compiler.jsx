@@ -1,8 +1,8 @@
 #target estoolkit#dbg
 function compileBinary()
 {
-	var batchFolder = new Folder("/Volumes/Macintosh HD/Users/will.dowling/automatic_binary_conversion/convert_to_binary");
-	var destFolder = new Folder("/Volumes/Macintosh HD/Users/will.dowling/automatic_binary_conversion/binary_converted");
+	var batchFolder = new Folder("~/automatic_binary_conversion/convert_to_binary");
+	var destFolder = new Folder("~/automatic_binary_conversion/binary_converted");
 
 	var logFile = File("~/automatic_binary_conversion/bin_conversion_log.txt");
 	var logTxt = "";
