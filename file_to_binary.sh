@@ -40,7 +40,7 @@ osascript -e 'quit app "ExtendScript Toolkit"'
 #noisy version..
 # /Volumes/Macintosh\ HD/Applications/Adobe\ ExtendScript\ Toolkit\ CC/ExtendScript\ Toolkit.app/Contents/MacOs/ExtendScript\ Toolkit -cmd $compiler &&
 
-mv $convertedFiles/*.jsx $projectFolder &&
+mv $convertedFiles/*.jsx* $projectFolder &&
 
 rm $filesToConvert/* &&
 echo "Successfully created binary files."
