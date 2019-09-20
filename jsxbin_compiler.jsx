@@ -23,7 +23,6 @@ function compileBinary()
 	var compFiles;
 	var contents,compiledString,outFile;
 
-	var pat = /\s/g;
 	var devPat = /_Dev\.js[x]?/;
 
 	function compileAndWrite(file)
@@ -42,7 +41,7 @@ function compileBinary()
 		log("contents of file: " + contents);
 		compiledString = app.compile(contents);
 		log("compiledString = " + compiledString);
-		compiledString = compiledString.replace(pat,"");
+		compiledString = compiledString.replace(/\s/g,"");
 		compiledString = "eval(\"" + compiledString + "\")";
 		log("after formatting:");
 		log("compiledString = " + compiledString);
@@ -60,12 +59,11 @@ function compileBinary()
 
 		log("outFile = " + outFile.fullName);
 
-		log("outFile.exists = " + outFile.exists);
 		outFile.open("w");
 		outFile.write(compiledString);
 		outFile.close();
+		
 		log("wrote the data to outFile");
-		log("outFile.exists = " + outFile.exists);
 	}
 
 
